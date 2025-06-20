@@ -18,7 +18,7 @@ def predict():
         # Extract input from form
         features = [float(x) for x in request.form.values()]
         input_array = np.array([features])
-        
+
         # Make prediction
         prediction = model.predict(input_array)
         result = "Anemic" if prediction[0] == 1 else "Not Anemic"
